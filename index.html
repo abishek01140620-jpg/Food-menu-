@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spice Route | Online Food Menu</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div>
+        <h1>Spice Route</h1>
+        <p>Fresh, delicious meals delivered to your table</p>
+      </div>
+
+      <button id="cartButton" class="cart-button">
+        🛒 Cart
+        <span id="cartCount" class="cart-count">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="menu-section">
+      <h2>Our Menu</h2>
+
+      <div class="category-filters">
+        <button class="filter-btn active" data-category="all">All</button>
+        <button class="filter-btn" data-category="starters">Starters</button>
+        <button class="filter-btn" data-category="main-course">Main Course</button>
+        <button class="filter-btn" data-category="desserts">Desserts</button>
+        <button class="filter-btn" data-category="drinks">Drinks</button>
+      </div>
+
+      <div id="menuGrid" class="menu-grid"></div>
+    </section>
+
+    <aside id="cartPanel" class="cart-panel">
+      <div class="cart-header">
+        <h2>Your Cart</h2>
+        <button id="closeCart" class="close-cart">✕</button>
+      </div>
+
+      <div id="cartItems" class="cart-items"></div>
+
+      <div class="cart-summary">
+        <div class="summary-row">
+          <span>Subtotal</span>
+          <span id="subtotal">₹0</span>
+        </div>
+
+        <div class="summary-row">
+          <span>GST (5%)</span>
+          <span id="tax">₹0</span>
+        </div>
+
+        <div class="summary-row total">
+          <span>Total</span>
+          <span id="total">₹0</span>
+        </div>
+
+        <button id="checkoutButton" class="checkout-button">
+          Place Order
+        </button>
+
+        <p class="demo-note">
+          This is a front-end demo. No real payment or order processing is included.
+        </p>
+      </div>
+    </aside>
+
+  </main>
+
+  <div id="orderMessage" class="order-message hidden">
+    <h3>Order placed successfully!</h3>
+    <p>This demo does not process real orders or payments.</p>
+    <button id="closeMessage">Close</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
